@@ -55,35 +55,50 @@ figure>div {
     background-color: #005f73;
 }
 
-.flex__container {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    gap: 4%;
+@media (min-width: 550px) {
+    .flex__container {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        gap: 4%;
+    }
+    figure, 
+    .span2 {
+        flex-basis: 48%;
+    }
+    .span3, 
+    .span3-550px, 
+    .span4,
+    .span2-5row {
+        flex-basis: 100%;
+    }
+
 }
 
-figure {
-    flex-basis: 22%;
-}
+@media (min-width: 800px) {
+    figure, 
+    .span3-550px {
+        flex-basis: 22%;
+    }
 
-.span2 {
-    flex-basis: 48%;
-}
+    .span2,
+    .span2-5row {
+        flex-basis: 48%;
+    }
 
-.span3 {
-    flex-basis: 74%;
-}
+    .span3 {
+        flex-basis: 74%;
+    }
 
-.span4 {
-    flex-basis: 100%;
-}
+    .order-1 {
+        order: 1;
+    }
 
-.order-1 {
-    order: 1;
-}
-.order-2 {
-    order: 2;
-}
-.order-3 {
-    order: 3;
+    .order-2 {
+        order: 2;
+    }
+
+    .order-3 {
+        order: 3;
+    }
 }
